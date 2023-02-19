@@ -26,7 +26,7 @@
             </div>
         </nav>
     </header>
-    <main> <div class="d-flex  flex-md-row flex-sm-column g-2"><section id="math-section">
+    <main> <div class="d-flex flex-column flex-md-row  g-2"><section id="math-section">
       <div class="row row-cols-1 row-cols-md-3 g-2  ">
           <div class="col">
             <div class="card px-1">
@@ -38,8 +38,9 @@
                   h</p>
                   <div class="d-flex flex-row 
 
-                  "> <input  class="w-100 me-3" type="text"
-                   placeholder="b      cm"> <input class="w-100 me-3"type="text" placeholder="h        cm">
+                  "> <input id="triangle-base" class="w-100 me-3" type="text"
+                   placeholder="b      cm">
+                    <input id="triangle-height"  class="w-100 me-3"type="text" placeholder="h        cm">
                   </div>
                   <button id="btn-triangle" class="btn btn-primary ps-3 px-3 text-center mx-3 mt-5 mb-3 ">Calculate</button>
                 
@@ -55,7 +56,7 @@
                    w  x  l </p>
                     <div class="d-flex flex-row 
 
-                    "> <input  class="w-100 me-3" type="text" placeholder="w        cm"> <input class="w-100 me-3"type="text" placeholder="l         cm">
+                    "> <input id="rectangle-base"  class="w-100 me-3" type="text" placeholder="w        cm"> <input id="rectangle-height"class="w-100 me-3"type="text" placeholder="l         cm">
                     </div>
                     <button id="btn-rectangle" class="btn btn-primary ps-3 px-3 text-center mx-3 mt-5 mb-3 ">Calculate</button>
                 
@@ -118,9 +119,12 @@
         </div>
   </section>
 <section>
-  <div id="result" class="card text-center" style="width: 237px;height: 454px;">
+  <div  class="card text-center" style="width: 237px;height: 454px;">
     <div class="card-body">
       <h5 class="card-title"><u>Area Calculation</u></h5>
+      <div id="result">
+
+      </div>
       
     </div>
   </div>
@@ -129,7 +133,8 @@
         
 
     </main>
-    <script src="js/assignment.js
+    <script src="js/utilities.js"></script>
+    <script src="js/calculation.js
     "></script>
 </body>
 
