@@ -71,6 +71,30 @@ document.getElementById('btn-parallelogram').addEventListener('click',function()
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
+ }rhombus
+})
+document.getElementById('btn-rhombus').addEventListener('click',function(){
+   const rhombusBaseValue = getTextValue('rhombus-d1');
+  const rhombusHeightValue =getTextValue('rhombus-d2');
+ const rhombusArea = 0.5*rhombusBaseValue*rhombusHeightValue;
+ if(typeof rhombusBaseValue  !== 'number' ){
+   alert('please type a number')
+ }
+ else if (rhombusBaseValue  <0 ||rhombusHeightValue<0   ) {
+    alert('please type a natural number ')
+ }
+ else if(rhombusBaseValue===''||rhombusHeightValue===''){
+   alert('please type a number')
+ }
+ else{
+    
+ const li = document.createElement('li');
+ li.innerHTML=`2.rhombus ${rhombusArea}`
+ const ul = document.getElementById('result')
+ ul.appendChild(li)
+  
  }
 })
+
+
 
