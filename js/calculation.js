@@ -2,6 +2,7 @@
     window.location.href = "http://127.0.0.1:5500/blog.html";
  }) 
 
+
  
 
 
@@ -22,7 +23,7 @@
  }
  else{
    const li = document.createElement('li');
- li.innerHTML=`1.Triangle ${triangleArea}`
+ li.innerHTML=`Triangle ${triangleArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
  }
@@ -43,7 +44,7 @@
  }
  else{
    const li = document.createElement('li');
- li.innerHTML=`1.Rectangle ${rectangleArea}`
+ li.innerHTML=`Rectangle ${rectangleArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
  }
@@ -67,7 +68,7 @@ document.getElementById('btn-parallelogram').addEventListener('click',function()
  else{
     
  const li = document.createElement('li');
- li.innerHTML=`2.Parallelogram ${parallelogramArea}`
+ li.innerHTML=`Parallelogram ${parallelogramArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
@@ -89,7 +90,7 @@ document.getElementById('btn-rhombus').addEventListener('click',function(){
  else{
     
  const li = document.createElement('li');
- li.innerHTML=`2.Rhombus ${rhombusArea}`
+ li.innerHTML=`Rhombus ${rhombusArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
@@ -112,7 +113,33 @@ document.getElementById('btn-pentagon').addEventListener('click',function(){
  else{
     
  const li = document.createElement('li');
-li.innerHTML=`2.Pentagon ${pentagonArea}`
+li.innerHTML=`Pentagon ${pentagonArea}`
+ const ul = document.getElementById('result')
+ ul.appendChild(li)
+  
+ }
+})
+
+document.getElementById('btn-ellipse').addEventListener('click',function(){
+   const ellipseBaseValue = getTextValue('ellipse-a');
+  const ellipseHeightValue =getTextValue('ellipse-b');
+ const ellipseAreaLongValue = 3.14*ellipseBaseValue*ellipseHeightValue;
+ const ellipseAreaTwoDecimalValue= ellipseAreaLongValue.toFixed(2);
+ const  ellipseArea = parseFloat(ellipseAreaTwoDecimalValue);
+
+ if(typeof ellipseBaseValue  !== 'number' ){
+   alert('please type a number')
+ }
+ else if (ellipseBaseValue  <0 ||ellipseHeightValue<0   ) {
+    alert('please type a natural number ')
+ }
+ else if(ellipseBaseValue===''||ellipseHeightValue===''){
+   alert('please type a number')
+ }
+ else{
+    
+ const li = document.createElement('li');
+li.innerHTML=`Ellipse ${ellipseArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
