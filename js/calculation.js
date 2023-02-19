@@ -43,7 +43,7 @@
  else{
     
  const li = document.createElement('li');
- li.innerHTML=`1.Rectangle ${rectangleArea}`
+ li.innerHTML=`2.Rectangle ${rectangleArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
   

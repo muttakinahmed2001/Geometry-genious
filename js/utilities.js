@@ -5,3 +5,10 @@ function getFieldValue(inputId){
     return  FormulaValue ;
    
  }
+function getTextValue(elementId){
+    const FormulaField= document.getElementById(elementId);
+    const FormulaValueString = FormulaField.value;
+    const FormulaValue = parseFloat(FormulaValueString);
+    return  FormulaValue ;
+   
+ }
