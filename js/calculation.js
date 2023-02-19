@@ -72,7 +72,7 @@ document.getElementById('btn-parallelogram').addEventListener('click',function()
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
- }rhombus
+ }
 })
 document.getElementById('btn-rhombus').addEventListener('click',function(){
    const rhombusBaseValue = getTextValue('rhombus-d1');
