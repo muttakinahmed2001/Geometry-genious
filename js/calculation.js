@@ -43,7 +43,7 @@
  }
  else{
    const li = document.createElement('li');
- li.innerHTML=`1.rectangle ${rectangleArea}`
+ li.innerHTML=`1.Rectangle ${rectangleArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
  }
@@ -67,7 +67,7 @@ document.getElementById('btn-parallelogram').addEventListener('click',function()
  else{
     
  const li = document.createElement('li');
- li.innerHTML=`2.parallelogram ${parallelogramArea}`
+ li.innerHTML=`2.Parallelogram ${parallelogramArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
@@ -89,12 +89,37 @@ document.getElementById('btn-rhombus').addEventListener('click',function(){
  else{
     
  const li = document.createElement('li');
- li.innerHTML=`2.rhombus ${rhombusArea}`
+ li.innerHTML=`2.Rhombus ${rhombusArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
  }
 })
+
+document.getElementById('btn-pentagon').addEventListener('click',function(){
+   const pentagonBaseValue = getTextValue('pentagon-base');
+  const pentagonHeightValue =getTextValue('pentagon-height');
+ const pentagonArea = 0.5*pentagonBaseValue*pentagonHeightValue;
+ if(typeof pentagonBaseValue  !== 'number' ){
+   alert('please type a number')
+ }
+ else if (pentagonBaseValue  <0 ||pentagonHeightValue<0   ) {
+    alert('please type a natural number ')
+ }
+ else if(pentagonBaseValue===''||pentagonHeightValue===''){
+   alert('please type a number')
+ }
+ else{
+    
+ const li = document.createElement('li');
+li.innerHTML=`2.Pentagon ${pentagonArea}`
+ const ul = document.getElementById('result')
+ ul.appendChild(li)
+  
+ }
+})
+
+
 
 
 
