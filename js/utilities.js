@@ -7,8 +7,9 @@ function getFieldValue(inputId){
  }
 function getTextValue(elementId){
     const FormulaField= document.getElementById(elementId);
-    const FormulaValueString = FormulaField.value;
+    const FormulaValueString = FormulaField.innerText;
     const FormulaValue = parseFloat(FormulaValueString);
-    return  FormulaValue ;
+    return  FormulaValue ;}
+  
+
    
- }

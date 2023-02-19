@@ -30,8 +30,9 @@
  document.getElementById('btn-rectangle').addEventListener('click',function(){
    const rectangleBaseValue = getFieldValue('rectangle-base');
   const rectangleHeightValue =getFieldValue('rectangle-height');
- const rectangleArea = 0.5*rectangleBaseValue*rectangleHeightValue;
- if(typeof rectangleBaseValue  !== 'number' ){
+ const rectangleArea = rectangleBaseValue*rectangleHeightValue;
+ 
+ if(isNaN(rectangleBaseValue) ){
    alert('please type a number')
  }
  else if (rectangleBaseValue  <0 ||rectangleHeightValue<0   ) {
@@ -41,13 +42,35 @@
    alert('please type a number')
  }
  else{
+   const li = document.createElement('li');
+ li.innerHTML=`1.rectangle ${rectangleArea}`
+ const ul = document.getElementById('result')
+ ul.appendChild(li)
+ }
+ })
+ 
+ 
+ 
+document.getElementById('btn-parallelogram').addEventListener('click',function(){
+   const parallelogramBaseValue = getTextValue('base-parallelogram');
+  const parallelogramHeightValue =getTextValue('height-parallelogram');
+ const parallelogramArea = parallelogramBaseValue*parallelogramHeightValue;
+ if(typeof parallelogramBaseValue  !== 'number' ){
+   alert('please type a number')
+ }
+ else if (parallelogramBaseValue  <0 ||parallelogramHeightValue<0   ) {
+    alert('please type a natural number ')
+ }
+ else if(parallelogramBaseValue===''||parallelogramHeightValue===''){
+   alert('please type a number')
+ }
+ else{
     
  const li = document.createElement('li');
- li.innerHTML=`2.Rectangle ${rectangleArea}`
+ li.innerHTML=`2.parallelogram ${parallelogramArea}`
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
  }
- 
- 
- })
+})
+
