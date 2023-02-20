@@ -22,8 +22,15 @@
    alert('please type a number')
  }
  else{
-   const li = document.createElement('li');
- li.innerHTML=`Triangle ${triangleArea}`
+   
+  const btnConvert = document.createElement('button');
+  btnConvert.innerHTML =`Covert to m `;
+  btnConvert.style.backgroundColor = 'blue';
+ 
+  const li = document.createElement('li');
+  
+ li.innerHTML=`Triangle ${triangleArea}   `
+ li.appendChild(btnConvert);
  const ul = document.getElementById('result')
  ul.appendChild(li)
  }
@@ -42,9 +49,14 @@
  else if(rectangleBaseValue===''||rectangleHeightValue===''){
    alert('please type a number')
  }
- else{
-   const li = document.createElement('li');
+ else{ const btnConvert = document.createElement('button');
+  btnConvert.innerHTML =`Covert to m `;
+  btnConvert.style.backgroundColor = 'blue';
+ 
+  const li = document.createElement('li');
+ 
  li.innerHTML=`Rectangle ${rectangleArea}`
+ li.appendChild(btnConvert);
  const ul = document.getElementById('result')
  ul.appendChild(li)
  }
@@ -66,9 +78,14 @@ document.getElementById('btn-parallelogram').addEventListener('click',function()
    alert('please type a number')
  }
  else{
-    
+     const btnConvert = document.createElement('button');
+  btnConvert.innerHTML =`Covert to m `;
+  btnConvert.style.backgroundColor = 'blue';
+  
  const li = document.createElement('li');
+ 
  li.innerHTML=`Parallelogram ${parallelogramArea}`
+ li.appendChild(btnConvert);
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
@@ -88,9 +105,14 @@ document.getElementById('btn-rhombus').addEventListener('click',function(){
    alert('please type a number')
  }
  else{
-    
+     const btnConvert = document.createElement('button');
+  btnConvert.innerHTML =`Covert to m `;
+  btnConvert.style.backgroundColor = 'blue';
+  
  const li = document.createElement('li');
+
  li.innerHTML=`Rhombus ${rhombusArea}`
+ li.appendChild(btnConvert);
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
@@ -111,9 +133,15 @@ document.getElementById('btn-pentagon').addEventListener('click',function(){
    alert('please type a number')
  }
  else{
-    
+     const btnConvert = document.createElement('button');
+  btnConvert.innerHTML =`Covert to m `;
+  btnConvert.style.backgroundColor = 'blue';
+  
  const li = document.createElement('li');
+ 
+ 
 li.innerHTML=`Pentagon ${pentagonArea}`
+li.appendChild(btnConvert);
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
@@ -137,9 +165,13 @@ document.getElementById('btn-ellipse').addEventListener('click',function(){
    alert('please type a number')
  }
  else{
-    
+     const btnConvert = document.createElement('button');
+  btnConvert.innerHTML =`Covert to m `;
+  btnConvert.style.backgroundColor = 'blue';
  const li = document.createElement('li');
+
 li.innerHTML=`Ellipse ${ellipseArea}`
+li.appendChild(btnConvert);
  const ul = document.getElementById('result')
  ul.appendChild(li)
   
